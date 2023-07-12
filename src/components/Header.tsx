@@ -10,9 +10,9 @@ export default function Header() {
       </Link>
       <nav className="header__navbar">
         <Link href="/" className="header__link header__link_active">О нас</Link>
-        <Link href="" className="header__link">Услуги</Link>
-        <Link href="" className="header__link">Тарифы</Link>
-        <Link href="" className="header__link">Контакты</Link>
+        <Link href="/" className="header__link">Услуги</Link>
+        <Link href="/" className="header__link">Тарифы</Link>
+        <Link href="/" className="header__link">Контакты</Link>
       </nav>
     </header>
   )

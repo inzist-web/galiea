@@ -1,0 +1,85 @@
+.questions {
+  display: flex;
+  padding: 64px 100px;
+  justify-content: flex-end;
+
+  background-color: #DCF7FF;;
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: white;
+    padding: 40px 70px;
+    border-radius: 10px;
+    max-width: 610px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106.187%;
+  }
+
+  &__description {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: none;
+    padding: 0;
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(71, 98, 255, 0.08);
+    border: none;
+    padding: 20px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__input-error {
+    position: absolute;
+    font-size: 12px;
+    color: red;
+    padding-top: 2px;
+  }
+
+  &__submit {
+    border: none;
+    border-radius: 8px;
+    background-color: #00C2FF;
+    color: white;
+    padding: 22px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: #009dcd;
+    }
+  }
+}
