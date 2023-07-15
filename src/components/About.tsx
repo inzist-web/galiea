@@ -1,3 +1,5 @@
+import '@/blocks/about.scss'
+
 export default function About() {
   return (
     <section className="about">
@@ -28,7 +30,7 @@ export default function About() {
               <p className="about__advantage-text">Лет на рынке</p>
             </div>
             <div className="about__advantage">
-              <h2 className="about__advantage-heading"> 100%</h2>
+              <h2 className="about__advantage-heading">100%</h2>
               <p className="about__advantage-text">Довольных клиентов</p>
             </div>
             <div className="about__advantage">

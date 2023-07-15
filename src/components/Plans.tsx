@@ -1,3 +1,5 @@
+import '@/blocks/plans.scss'
+
 export default function Plans() {
   return (
     <section className="plans">
