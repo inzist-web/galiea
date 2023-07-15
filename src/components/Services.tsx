@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import '@/blocks/services.scss'
+
 export default function Services() {
   return (
     <section className="services">

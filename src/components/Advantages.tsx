@@ -1,3 +1,5 @@
+import '@/blocks/advantages.scss'
+
 export default function Advantages() {
   return (
     <section className="advantages">
