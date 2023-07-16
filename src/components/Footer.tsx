@@ -1,12 +1,13 @@
-import React from 'react'
 import Link from "next/link"
+import '@/blocks/footer.scss'
+
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <Link href="/" className='footer__link'>
-          <img src="" alt="" className="footer__logo" />
+        <Link href="/" className='footer__logo'>
+        <img src="/logo.svg" alt="логотип" className="footer__icon" />
           <h2 className="footer__name">Галиэя</h2>
         </Link>
         <p className="footer__text">Nam posuere accumsan porta. Integer id orci sed ante tincidunt tincidunt sit amet sed libero.</p>

@@ -1,9 +1,5 @@
-.header {
-  display: flex;
-  gap: 70px;
-  align-items: flex-end;
-  padding: 30px 100px;
-
+.footer {
+  
   &__logo {
     display: flex;
     align-items: flex-end;
@@ -24,23 +20,5 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-  }
-
-  &__navbar {
-    display: flex;
-    gap: 60px
-  }
-
-  &__link {
-    text-decoration: none;
-    color: inherit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-
-    &_active {
-      color: #00C2FF;
-    }
   }
 }
