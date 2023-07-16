@@ -1,0 +1,104 @@
+.plans {
+  display: flex;
+  flex-direction: column;
+  padding: 0 116px 70px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__heading {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    padding-bottom: 20px;
+  }
+
+  &__wrapper-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2.5fr 1fr;
+    gap: 30px
+  }
+
+  &__card-heading {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; 
+
+    &_wide {
+      width: 60%;
+      padding: 12px 0;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10.428px;
+    background: #EEE;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+    padding: 35px;
+    position: relative;
+
+    &_wide {
+      grid-column: span 2;
+      padding: 38px 38px 24px;
+    }
+  }
+
+  &__content-wrapper {
+    border-radius: inherit;
+    background-color: #00C2FF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 35px 35px 20px;
+  }
+
+  &__text {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    &_theme_blue {
+      color: #00C2FF;
+      font-size: 26.656px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  &__price {
+    color: #FFF;
+    font-size: 21.908px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47.923px;
+
+    &_theme_bold {
+      font-size: 43.815px;
+    }
+
+    &_theme_blue {
+      color: #00C2FF;
+    }
+  }
+
+  &__image {
+    &_wide {
+      position: absolute;
+      right: 7%;
+    }
+  }
+}
