@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next'  
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import '@/blocks/page.scss'
+import '@/vendor/fonts.scss'
 
 export const metadata: Metadata = {
   title: 'Бухгалтерская компания "Галиэя"',
@@ -17,7 +18,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className="page">
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
