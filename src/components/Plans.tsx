@@ -41,7 +41,7 @@ export default function Plans() {
           </div>
           <Image src={wideFolder} alt="" className="plans__image plans__image_wide" />
         </div>
-        <div className="plans__card">
+        <div className="plans__card plans__card_theme_blue">
           <p className="plans__text plans__text_theme_blue">В каждом тарифе все пени и штрафы по нашей вине оплачиваем мы!</p>
         </div>
       </div>

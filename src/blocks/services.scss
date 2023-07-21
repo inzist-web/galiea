@@ -1,3 +1,5 @@
+@import 'mixins.scss';
+
 .services {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,23 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  @include wide-tablet {
+    padding: 0 50px 70px;
+  }
+
+  @include mobile {
+    padding: 0 30px 70px;
+  }
+
   &__wrapper-services {
     display: flex;
+
     &_reversed {
       flex-direction: row-reverse;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
     }
   }
 
@@ -17,6 +32,15 @@
     flex-direction: column;
     gap: 10px;
     padding: 0;
+    min-width: 500px;
+
+    @include tablet {
+      min-width: 0;
+    }
+
+    @include mobile {
+      gap: 25px;
+    }
   }
 
   &__text {
@@ -29,10 +53,16 @@
 
   &__image {
     display: block;
-    width: auto;
     height: 100%;
     max-width: 500px;
+    min-width: 0;
     object-fit: cover;
+    flex-shrink: 1;
+    align-self: center;
+
+    @include tablet {
+      width: 100%;
+    }
   }
   
   &__heading {
@@ -41,5 +71,10 @@
     font-weight: 700;
     line-height: 35px;
     padding: 23px 10px;
+
+    @include mobile {
+      font-size: 26.658px;
+      line-height: 29.158px; 
+    }
   }
 }

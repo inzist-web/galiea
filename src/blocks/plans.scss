@@ -1,9 +1,15 @@
+@import 'mixins.scss';
+
 .plans {
   display: flex;
   flex-direction: column;
-  padding: 0 116px 70px;
+  padding: 0 110px 70px;
   max-width: 1440px;
   margin: 0 auto;
+
+  @include pc {
+    padding: 0 7.639vw 70px;
+  }
 
   &__heading {
     font-size: 40px;
@@ -11,24 +17,27 @@
     font-weight: 700;
     line-height: 47px;
     padding-bottom: 20px;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__wrapper-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2.5fr 1fr;
-    gap: 30px
-  }
+    gap: 30px;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 5fr 5fr 1fr;
+    }
 
-  &__card-heading {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 35px; 
-
-    &_wide {
-      width: 60%;
-      padding: 12px 0;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -41,10 +50,44 @@
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
     padding: 35px;
     position: relative;
+    overflow: hidden;
+
+    @include pc {
+      padding: 2.431vw;
+    }
+
+    @include tablet {
+      padding: 4.258vw 4.258vw 0;
+      gap: 20px;
+    }
+
+    @include mobile {
+      width: 270px;
+      padding: 32px;
+    }
 
     &_wide {
       grid-column: span 2;
       padding: 38px 38px 24px;
+
+      @include pc {
+        padding: 2.639vw 2.639vw 1.667vw;
+      }
+      
+      @include tablet {
+        grid-column: span 1;
+        padding: 4.258vw 4.258vw 0;
+      }
+
+      @include mobile {
+        padding: 32px;
+      }
+    }
+
+    &_theme_blue {
+      @include tablet {
+        grid-column: span 2;
+      }
     }
   }
 
@@ -60,6 +103,16 @@
     justify-content: flex-end;
     gap: 10px;
     padding: 35px 35px 20px;
+
+    @include pc {
+      gap: 0.694vw;
+      padding: 2.431vw 2.431vw 1.389vw;
+    }
+
+    @include mobile {
+      gap: 15px;
+      padding: 25px 25px 13px;
+    }
   }
 
   &__text {
@@ -70,12 +123,72 @@
     font-weight: 400;
     line-height: normal;
     
+    @include pc {
+      font-size: 1.11vw;
+      line-height: normal;
+    }
+
+    @include tablet {
+      font-size: 1.674vw;
+    }
+
+    @include mobile {
+      font-size: 12.856px;
+      line-height: normal;
+    }
+
     &_theme_blue {
       color: #00C2FF;
       font-size: 26.656px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+
+      @include pc {
+        font-size: 1.851vw;
+        line-height: normal;
+      }
+
+      @include mobile {
+        font-size: 23.287px;
+      }
+    }
+  }
+
+  &__card-heading {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+
+    @include pc {
+      font-size: 2.222vw;
+      line-height: 2.431vw;
+    }
+
+    @include tablet {
+      font-size: 3vw;
+      line-height: 120%;
+    }
+
+    @include mobile {
+      font-size: 27.6px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30.187px; 
+    }
+
+    &_wide {
+      width: 60%;
+      padding: 12px 0;
+
+      @include pc {
+        padding: 0.833vw 0;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 
@@ -86,19 +199,65 @@
     font-weight: 700;
     line-height: 47.923px;
 
+    @include pc {
+      font-size: 1.521vw;
+      line-height: 3.328vw;
+    }
+
+    @include tablet {
+      font-size: 2.460vw;
+      line-height: 210%;
+    }
+
+    @include mobile {
+      font-size: 17px;
+    }
+
     &_theme_bold {
       font-size: 43.815px;
+      @include pc {
+        font-size: 3.043vw;
+      }
+
+      @include tablet {
+        font-size: 4.921vw;
+      }
+
+      @include mobile {
+        font-size: 37.791px;
+      }
     }
 
     &_theme_blue {
       color: #00C2FF;
+
+      @include tablet {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #FFF;
+        background-color: #00C2FF;
+        width: 100%;
+        padding: 18px 25px;
+        border-radius: 10.428px;
+        line-height: 120%;
+      }
     }
   }
 
   &__image {
+    width: auto;
+    height: auto;
     &_wide {
       position: absolute;
       right: 7%;
+      width: 320px;
+      height: auto;
+      @include tablet {
+        position: static;
+        width: auto;
+      }
     }
   }
 }
