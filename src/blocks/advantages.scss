@@ -1,0 +1,33 @@
+.advantages {
+  &__heading {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px; /* 117.5% */
+  }
+
+  &__cards {
+    display: grid;
+  }
+
+  &__text {
+    color: rgba(51, 51, 51, 0.80);
+    font-feature-settings: 'liga' off;
+    font-family: Inter;
+    font-size: 18.539px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__card {
+
+    &_size_long {
+
+    }
+  }
+
+
+}

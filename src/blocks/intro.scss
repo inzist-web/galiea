@@ -1,0 +1,56 @@
+.intro {
+ 
+  &__content {
+
+  }
+
+  &__header {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 55px; /* 114.583% */
+  }
+
+  &__text {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 145.455% */
+  }
+
+  &__link {
+    color: #00C2FF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__link-text {
+
+  }
+
+  &__link-icon {
+
+  }
+
+  &__image-wrapper {
+
+  }
+
+  &__image-text {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16.418px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
