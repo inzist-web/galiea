@@ -1,11 +1,13 @@
 @import 'mixins.scss';
 
 .services {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 100px;
   max-width: 1440px;
   margin: 0 auto;
+  overflow: visible;
 
   @include wide-tablet {
     padding: 0 50px 70px;
@@ -75,6 +77,17 @@
     @include mobile {
       font-size: 26.658px;
       line-height: 29.158px; 
+    }
+  }
+
+  &__background {
+    position: absolute;
+    right: -300px;
+    top: -500px;
+    z-index: -1;
+
+    @include mobile {
+      display: none;
     }
   }
 }
