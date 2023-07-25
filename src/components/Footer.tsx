@@ -6,48 +6,41 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <Link href="/" className='footer__logo'>
-        <img src="/logo.svg" alt="логотип" className="footer__icon" />
-          <h2 className="footer__name">Галиэя</h2>
-        </Link>
-        <p className="footer__text">Nam posuere accumsan porta. Integer id orci sed ante tincidunt tincidunt sit amet sed libero.</p>
-        <p className="footer__text">© Skyrev Theme 2020</p>
-      </div>
-      <div className="footer__wrapper">
-        <h2 className="footer__heading">Company</h2>
-        <Link href="/" className='footer__link'>
-          <p className="link-text">Test</p>
-        </Link>
-      </div>
-      <div className="footer__wrapper">
-        <h2 className="footer__heading">Services</h2>
-        <Link href="/" className='footer__link'>
-          <p className="link-text">Test</p>
-        </Link>
-      </div>
-      <div className="footer__wrapper">
-        <h2 className="footer__heading">Resources</h2>
-        <Link href="/" className='footer__link'>
-          <p className="link-text">Test</p>
-        </Link>
-      </div>
-      <div className="footer__wrapper">
-        <div className="footer__link-wrapper">
-          <Link href="/" className="footer__link">
-            <img src="" alt="" className="footer__link-icon" />
+        <div className="footer__info-paragraph">
+          <Link href="/" className='footer__logo'>
+            <img src="/logo.svg" alt="логотип" className="footer__icon" />
+            <h2 className="footer__name">Галиэя</h2>
           </Link>
-          <Link href="/" className="footer__link">
-            <img src="" alt="" className="footer__link-icon" />
-          </Link>
-          <Link href="/" className="footer__link">
-            <img src="" alt="" className="footer__link-icon" />
-          </Link>
-          <Link href="/" className="footer__link">
-            <img src="" alt="" className="footer__link-icon" />
-          </Link>
+          <p className="footer__text">ООО "Бухгалтерская компания "Галиэя"</p>
         </div>
-        
+        <div className="footer__info">
+          <div className="footer__info-paragraph">
+            <h2 className="footer__heading">Где мы Находимся?</h2>
+            <a href="geo:59.99682100547382,29.76744394790065" className='footer__link'>
+              Санкт-Петербург, Кронштадт, пр. Ленина, д. 16, оф. 335
+            </a>
+          </div>
+          <div className="footer__info-paragraph">
+            <h2 className="footer__heading">часы работы</h2>
+            <a className='footer__link'>
+              пн-пт с 9.00 до 17.00 без обеда
+            </a>
+          </div>
+          <div className="footer__info-paragraph">
+            <h2 className="footer__heading">контакты</h2>
+            <a href="tel:89217754801" className='footer__link'>
+              8-921-775-4801
+            </a>
+            <a href="tel:89500264727" className='footer__link'>
+              8-950-026-4727
+            </a>
+          </div>
+        </div>
       </div>
+      <a href="https://inzist.ru" target="_blank" className="footer__copyright">
+        разработка и дизайн сайта
+        <img src="/inzist.svg" alt="Inzist - web разработка" className="footer__copyright-image" />
+      </a>
     </footer>
   )
 }

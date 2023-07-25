@@ -1,4 +1,26 @@
+@import 'mixins.scss';
+
 .footer {
+  max-width: 1440px;
+  margin: auto;
+
+  background-image: url('/footer-bg.png');
+  background-position: right;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 64px 72px;
+
+  min-height: 360px;
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 85px;
+  }
   
   &__logo {
     display: flex;
@@ -20,5 +42,63 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  &__heading {
+    color: #02005E;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    color: #0000008a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+  }
+
+  &__link {
+    color: #0000008a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 85px;
+
+    &-paragraph{
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    align-items: center;
+
+    color: #0000008a;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; 
+    align-self: center;
+    text-decoration: none;
+    &-image {
+      width: 100px;
+    }
   }
 }
