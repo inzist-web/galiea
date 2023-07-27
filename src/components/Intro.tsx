@@ -1,5 +1,9 @@
-import Link from "next/link";
+import Link from "next/link"
+import Image from 'next/image'
 import '@/blocks/intro.scss'
+import office from '@/images/office.png'
+import writing from '@/images/writing.png'
+import bridge from '@/images/bridge.png'
 
 export default function Intro() {
   return (
@@ -8,12 +12,16 @@ export default function Intro() {
         <h1 className="intro__header">Бухгалтерская компания «Галиэя»</h1>
         <p className="intro__text">Качественное и надежное бухгалтерское обслуживание, которое позволит вам не отвлекаться от любимого дела</p>
         <Link href="/" className="intro__link">
-          <p className="header__link-text">Связаться</p>
-          <img src="" alt="" className="header__link-icon"/>
+          <p className="intro__link-text">Связаться</p>
+          <img src="/icons/send.svg" alt="" className="intro__link-icon"/>
         </Link>
       </div>
-      <div className="intro__image-wrapper">
+      <div className="intro__image-composition">
         <h2 className="intro__image-text">Ваше спокойствие — наша забота</h2>
+        <img src="/logo.svg" alt="логотип" className="intro__logo" />
+        <Image src={office} alt="" className="intro__image_position_top" />
+        <Image src={writing} alt="" className="intro__image_position_left" />
+        <Image src={bridge} alt="" className="intro__image_position_right" />
       </div>
     </section>
   )

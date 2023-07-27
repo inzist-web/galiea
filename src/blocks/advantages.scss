@@ -1,4 +1,11 @@
 .advantages {
+  padding: 0 110px 100px 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+
   &__heading {
     color: rgba(0, 0, 0, 0.87);
     font-family: Roboto;
@@ -6,10 +13,14 @@
     font-style: normal;
     font-weight: 700;
     line-height: 47px; /* 117.5% */
+    padding: 50px 750px 0px 0px;
   }
 
   &__cards {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
   }
 
   &__text {
@@ -20,14 +31,63 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding: 34px 177px 90px 57px;
+
+    &_long {
+      padding: 45px 500px 20px 55px;
+    }
+
   }
 
   &__card {
+    max-width: 585px;
+    height: 224px;
+    border-radius: 10.428px;
+    background: #EEE;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 
     &_size_long {
-
+      max-width: 100%;
+      height: 145px;
     }
   }
 
+  &__image-macbook {
+    position: relative;
+    top: -212px;
+    right: -189px;
+  }
+
+  &__image-safe {
+    position: relative;
+    top: -210px;
+    right: -335px;
+    z-index: 0;
+  }
+
+  &__image-pointers {
+    position: relative;
+    top: -230px;
+    right: -290px;
+  }
+
+  &__image-circle-left {
+    position: relative;
+    top: -270px;
+    right: 130px;
+  }
+
+  &__image-circle-right {
+    position: relative;
+    top: -940px;
+    right: -300px;
+  }
+
+  &__image-grath {
+    position: relative;
+    top: -270px;
+    left: 470px;
+  }
 
 }

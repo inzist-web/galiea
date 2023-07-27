@@ -3,6 +3,8 @@
   gap: 70px;
   align-items: flex-end;
   padding: 30px 100px;
+  margin: 0 auto;
+  max-width: 1440px;
 
   &__logo {
     display: flex;
@@ -41,6 +43,8 @@
 
     &_active {
       color: #00C2FF;
+      border-bottom: #00C2FF 3px solid;
+      border-radius: 3px;
     }
   }
 }
