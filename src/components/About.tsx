@@ -25,10 +25,12 @@ export default function About() {
       </div>
       <div className="about__wrapper-content">
         <div className="about__image-wrapper">
-          <h2 className="about__image-text">О нас</h2>
-          <Image src={aboutOffice} alt='' className='about__image-office'></Image>
-          <Image src={house} alt='' className='about__image-house'></Image>
-          <img src="/icons/rectangle.svg" alt="" className='about__rectangle'/>
+          <div className="about__image-text-wrapper">
+            <h2 className="about__image-text">О нас</h2>
+            <Image src={aboutOffice} alt='' className='about__image about__image_type_office' />
+            <Image src={house} alt='' className='about__image about__image_type_house' />
+            <img src="/about-bg.svg" alt="" className="about__background" />
+          </div>
         </div>
         <div className="about__wrapper-about">
           <h2 className="about__heading">«Галиэя» надежный партнер малого и среднего бизнеса.</h2>
