@@ -127,34 +127,51 @@
 
   &__image-text {
     color: #FFF;
-    font-family: Roboto;
     font-size: 58.985px;
     font-style: normal;
     font-weight: 600;
     line-height: 72.597px; /* 123.077% */
-    width: 205px;
-    position: relative;
-    top: 214px;
-    right: -173px;
     z-index: 7;
+    &-wrapper {
+      position: relative;
+      background-image: url('/icons/rectangle.svg');
+      background-repeat: no-repeat;
+      width: 270px;
+      height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
-  &__image-office {
-    position: relative;
-    top: -30px;
-    right: -360px;
-  }
+  &__image {
+    position: absolute;
+    
+    &_type {
+      &_house {
+        bottom: -154px;
+        right: -138px;
+      }
 
-  &__image-house {
-    position: relative;
-    top: 270px;
-    right: -80px;
+      &_office {
+        top: -85px;
+        right: -182px;
+      }
+    }
   }
 
   &__rectangle {
     position: relative;
     top: -175px;
     right: -113px;
+  }
+
+  &__background {
+    z-index: -1;
+    position: absolute;
+    top: -152px;
+    left: -132px;
+    width: 654px;
   }
 
 }
