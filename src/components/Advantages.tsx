@@ -24,7 +24,7 @@ export default function Advantages() {
           <p className="advantages__text">Затраты на бухгалтерское сопровождение ограничиваются стоимостью услуг нашей компании, которая значительно ниже расходов на содержание собственной бухгалтерии.</p>
           <Image src={pointers} alt='' className='advantages__image-pointers'></Image>        
         </div>
-        <div className="advantages__card">
+        <div className="advantages__card advantages__card_theme_blue">
           <p className="advantages__text">Высокая квалификация специалистов. Квалификация подтверждена аттестатами профессионального бухгалтера и регулярно повышается на конференциях, курсах и семинарах.</p>
           <Image src={cirlceLeft} alt='' className='advantages__image-circle-left'></Image>
           <Image src={circleRight} alt='' className='advantages__image-circle-right'></Image>

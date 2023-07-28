@@ -1,7 +1,17 @@
+@import 'mixins.scss';
+
 .intro {
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
+
+  @include tablet {
+    padding-top: 80px;
+  }
+
+  @include tablet {
+    flex-direction: column-reverse;
+  }
 
   &__content {
     padding: 160px 0 0 110px;
@@ -9,6 +19,19 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include wide-tablet {
+      padding: 130px 0 0 60px;
+    }
+
+    @include tablet {
+      padding-top: 0;
+    }
+
+    @include mobile {
+      padding-left: 35px;
+      width: 100%;
+    }
   }
 
   &__header {
@@ -19,6 +42,21 @@
     font-weight: 700;
     line-height: 55px; /* 114.583% */
     margin: 0;
+
+    @include laptop {
+      padding-right: 20px;
+    }
+
+    @include wide-tablet {
+      padding-right: 0;
+      width: 500px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 33.5px;
+      width: 356px;
+    }
   }
 
   &__text {
@@ -30,6 +68,20 @@
     line-height: 32px; /* 145.455% */
     padding-bottom: 5px;
     padding-right: 190px;
+
+    @include laptop {
+      padding-right: 100px;
+    }
+
+    @include tablet {
+      padding-right: 300px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 21.5px;
+      padding-right: 20px;
+    }
   }
 
   &__link {
@@ -84,6 +136,16 @@
     z-index: 7;
     top: 25px;
     right: -270px;
+
+    @include wide-tablet {
+      top: 20px;
+      right: -230px;
+    }
+
+    @include tablet {
+      top: -10px;
+      right: -550px;
+    }
   }
 
   &__logo {
@@ -93,23 +155,69 @@
     z-index: 7;
     right: 55px;
     top: -10px;
+
+    @include wide-tablet {
+      width: 320px;
+      right: 15px;
+      top: -10px;
+    }
+
+    @include tablet {
+      width: 360px;
+      right: -250px;
+      top: -20px;
+    }
   }
 
   &__image_position_top {
     position: relative;
     top: -360px;
     right: 210px;
+
+    @include wide-tablet {
+      top: -540px;
+      right: -188px;
+    }
+
+    @include tablet {
+      top: -360px;
+      right: -100px;
+    }
   }
 
   &__image_position_left {
     position: relative;
     top: -360px;
     right: 130px;
+
+    @include wide-tablet{ 
+      top: -300px;
+      right: 258px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include tablet {
+      top: -340px;
+      right: -185px;
+    }
   }
 
   &__image_position_right {
     position: relative;
     z-index: 1;
     top: -330px;
+
+    @include wide-tablet {
+      top: -530px;
+      right: -210px;
+      width: 220px;
+      height: 220px;
+    }
+
+    @include tablet {
+      top: -330px;
+      right: -310px;
+    }
   }
 }

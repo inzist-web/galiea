@@ -10,6 +10,7 @@ export default function About() {
         <div className="about__point">
           <h2 className="about__point-header about__point-header_active">Не затратно</h2>
           <p className="about__point-text">Мы дешевле главбуха!</p>
+          <div className="about__horizontal-line_wide"></div>
         </div>
         <div className="about__vertical-line"></div>
         <div className="about__point">
