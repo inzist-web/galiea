@@ -17,7 +17,6 @@ export default function Intro() {
         </Link>
       </div>
       <div className="intro__image-composition">
-        <img src="/intro-bg.svg" alt="" className="intro__background" />
         <h2 className="intro__image-text">Ваше спокойствие — наша забота</h2>
         <img src="/logo.svg" alt="логотип" className="intro__logo" />
         <Image src={office} alt="" className="intro__image_position_top" />

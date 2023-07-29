@@ -39,7 +39,7 @@ export default function About() {
             <div className="about__advantage">
               <h2 className="about__advantage-heading">10+</h2>
               <div className="about__horizontal-line"></div>
-              <p className="about__advantage-text">Лет на рынке</p>
+              <p className="about__advantage-text">Лет<br /> на&nbsp;рынке</p>
             </div>
             <div className="about__advantage">
               <h2 className="about__advantage-heading">100%</h2>
