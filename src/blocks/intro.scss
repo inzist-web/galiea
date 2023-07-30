@@ -115,6 +115,10 @@
   &__image-composition {
     max-height: 550px;
     max-width: 600px;
+
+    @include mobile {
+      height: 400px;
+    }
   }
 
   &__image-wrapper {
@@ -146,6 +150,12 @@
       top: -10px;
       right: -550px;
     }
+
+    @include mobile {
+      font-size: 15.356px;
+      top: -80px;
+      right: -170px;
+    }
   }
 
   &__logo {
@@ -167,6 +177,12 @@
       right: -250px;
       top: -20px;
     }
+    
+    @include mobile {
+      width: 320px;
+      right: -40px;
+      top: -130px;
+    }
   }
 
   &__image_position_top {
@@ -182,6 +198,11 @@
     @include tablet {
       top: -360px;
       right: -100px;
+    }
+
+    @include mobile {
+      top: -600px;
+      right: -248px;
     }
   }
 
@@ -201,6 +222,13 @@
       top: -340px;
       right: -185px;
     }
+
+    @include mobile {
+      width: 180px;
+      height: 180px;
+      top: -409px;
+      right: 190px;
+    }
   }
 
   &__image_position_right {
@@ -219,13 +247,31 @@
       top: -330px;
       right: -310px;
     }
+
+    @include mobile {
+      top: -553px;
+      right: -257px;
+    }
   }
 
   &__background {
     position: absolute;
     width: 1100px;
-    top: -320px;
-    right: -480px;
-    opacity: 0.8;
+    top: -120px;
+    right: -170px;
+    opacity: 0.25;
+    z-index: -1;
+
+    @include wide-tablet {
+      width: 900px;
+    }
+
+    @include mobile {
+      width: 500px;
+      top: 0;
+      right: 0;
+    }
   }
+
+  
 }
