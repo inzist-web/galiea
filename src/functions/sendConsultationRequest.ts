@@ -1,12 +1,21 @@
 'use server';
+
+import { z, ZodSchema } from 'zod'
+
 type CustomerData = {
   name: string,
   phone: number
 }
 
-export const sendConsultationResults = async ({name, phone}: CustomerData) => {
-  if (/\d/.test(String(phone)))
+const CustomerDataScheme: ZodSchema<CustomerData> = z.object({
+  name: z.string().max(24).min(3),
+  phone: z.number().min(1000000000).max(9999999999)
+})
+
+export const sendConsultationResults = async (userData: CustomerData) => {
+  if (CustomerDataScheme.safeParse(userData).success)
   console.log(`Заявка на сайте:
-  Имя: ${name}
-  Телефон: +7${phone}`)
+  Имя: ${userData.name}
+  Телефон: +7${userData.phone}`)
+  else console.log("Ты, ян")
 }

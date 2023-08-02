@@ -257,6 +257,7 @@
 
   &__background {
     position: absolute;
+    overflow: visible;
     top: -600px;
     right: -530px;
     z-index: -1;
