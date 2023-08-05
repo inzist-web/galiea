@@ -9,7 +9,7 @@ export default function Header() {
         <h2 className="header__name">Галиэя</h2>
       </Link>
       <nav className="header__navbar">
-        <Link href="/" className="header__link header__link_active">О нас</Link>
+        <Link href="/" className="header__link header__link_active">О&nbsp;нас</Link>
         <Link href="/" className="header__link">Услуги</Link>
         <Link href="/" className="header__link">Тарифы</Link>
         <Link href="/" className="header__link">Контакты</Link>
