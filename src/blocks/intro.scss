@@ -22,12 +22,30 @@
   @include tablet {
     flex-direction: column-reverse;
     min-height: 780px;
-    max-height: 800px;
-    height: 100vh;
+    height: auto;
+    max-height: none;
   }
 
   @include mobile {
     max-height: 1000px;
+    padding: 0 37px;
+  }
+
+  &__composition-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+
+    @include tablet {
+      height: 550px;
+      flex: auto;
+    }
+
+    @include mobile {   
+      height: 400px;
+    }
   }
 
   &__content {
@@ -35,6 +53,7 @@
     flex-direction: column;
     gap: 15px;
     width: 50%;
+    flex: 1;
 
     @include wide-tablet {
 
@@ -65,6 +84,11 @@
 
     @include wide-tablet {
       padding-right: 0;
+      font-size: 42px;
+      width: 100%;
+    }
+
+    @include tablet {
       width: 500px;
     }
 
@@ -91,12 +115,13 @@
     }
 
     @include tablet {
+      width: 150%;
     }
 
     @include mobile {
+      width: 100%;
       font-size: 16px;
       line-height: 21.5px;
-      padding-right: 20px;
     }
   }
 
@@ -131,15 +156,18 @@
 
   &__image-composition {
     max-height: 550px;
-    width: 50%;
+    width: 100%;
     position: relative;
 
     @include tablet {
-      height: 500px;
+      height: 300px;
+      width: 300px;
+      top: -50px;
     }
 
     @include mobile {
       height: 400px;
+      top: 40px;
     }
   }
 
@@ -170,13 +198,13 @@
 
     @include tablet {
       top: -21px;
-      right: -157px;
+      right: -117px;
     }
 
     @include mobile {
       font-size: 15.356px;
       top: -73px;
-      right: -127px;
+      right: -30px;
     }
   }
 
@@ -206,7 +234,6 @@
     @include mobile {
       width: 320px;
       top: -64px;
-      right: -67px;
     }
   }
 
@@ -232,7 +259,6 @@
 
     @include mobile {
       top: -71px;
-      right: -92px;
     }
   }
 
@@ -262,7 +288,6 @@
       width: 180px;
       height: 180px;
       top: 107px;
-      right: 137px;
     }
   }
 
@@ -291,7 +316,6 @@
 
     @include mobile {
       top: 105px;
-      right: -178px;
     }
   }
 
@@ -317,7 +341,6 @@
     @include mobile {
       width: 900px;
       top: -380px;
-      right: -349px;
     }
   }
 

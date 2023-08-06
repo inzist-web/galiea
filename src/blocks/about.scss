@@ -21,6 +21,11 @@
       padding: 0 45px 50px 45px
     }
 
+    @media screen and (max-width: 680px) {
+      padding: 0 10px;
+      
+    }
+
     @include mobile {
       flex-direction: column;
       align-items: center;
@@ -35,6 +40,10 @@
 
     @include wide-tablet {
       padding-left: 28px;
+    }
+
+    @media screen and (max-width: 680px) {
+      padding: 0;
     }
   }
 
