@@ -13,7 +13,7 @@ export default function Advantages() {
       <h2 className="advantages__heading">Преимущества работы с нашей компанией:</h2>
       <div className="advantages__cards">
         <div className="advantages__card">
-          <p className="advantages__text">Ответственность за начисленные налоги и правильность учета несет не главный бухгалтер, а юридическое лицо – бухгалтерская компания</p>
+          <p className="advantages__text">Ответственность за начисленные налоги и правильность учета несет не главный бухгалтер, а юридическое лицо – бухгалтерская компания.</p>
           <Image src={macbook} alt='' className='advantages__image-macbook'></Image>
         </div>
         <div className="advantages__card">
