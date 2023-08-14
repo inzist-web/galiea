@@ -59,6 +59,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    transition: 0.2s ease-in-out opacity;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     &_active {
       color: #00C2FF;

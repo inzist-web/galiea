@@ -11,10 +11,10 @@ export default function Intro() {
       <div className="intro__content">
         <h1 className="intro__header">Бухгалтерская компания «Галиэя»</h1>
         <p className="intro__text">Качественное и надежное бухгалтерское обслуживание, которое позволит вам не отвлекаться от любимого дела</p>
-        <Link href="/" className="intro__link">
+        <a href="#questions" className="intro__link">
           <p className="intro__link-text">Связаться</p>
           <img src="/icons/send.svg" alt="" className="intro__link-icon"/>
-        </Link>
+        </a>
       </div>
       <div className="intro__composition-container">
         <div className="intro__image-composition">

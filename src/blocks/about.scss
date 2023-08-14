@@ -58,6 +58,10 @@
       padding-right: 28px;
     }
 
+    @media screen and (max-width: 680px) {
+      display: none;
+    }
+
     @include mobile {
       display: none;
     }
@@ -79,6 +83,10 @@
       font-style: normal;
       font-weight: 500;
       line-height: 42px; /* 116.667% */
+    }
+
+    @media screen and (max-width: 680px) {
+      font-size: 32px;
     }
   }
 
@@ -137,8 +145,12 @@
   &__wrapper-content {
     display: flex;
 
-    @include mobile {
+    @include tablet {
       flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
     }
   }
 
@@ -241,11 +253,13 @@
     }
 
     @include tablet {
-      padding: 80px 0px 100px 150px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     @include mobile {
-      padding: 100px 0px 30px 0;
     }
   }
 
@@ -254,6 +268,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
+
+    @include tablet {
+      height: 500px;
+    }
+
+    @include mobile {
+      
+    }
   }
 
   &__image-text {
@@ -280,8 +303,12 @@
         left: -45px;
       }
 
+      @include tablet {
+        left: -85px;
+      }
+
       @include mobile {
-        left: -230px;
+        left: -80px;
       }
     }
   }

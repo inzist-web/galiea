@@ -7,7 +7,7 @@ import taxPicture from '@/images/tax.png'
 
 export default function Services() {
   return (
-    <section className="services">
+    <section className="services" id="services">
       <img src="/features-bg.png" className="services__background" />
       <div className="services__wrapper-services">
         <Image src={accountingPicture} alt="Бухуслуги" className="services__image"/>

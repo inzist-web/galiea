@@ -5,10 +5,10 @@ import house from '@/images/house.png'
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__wrapper-points">
         <div className="about__point">
-          <h2 className="about__point-header about__point-header_active">Не затратно</h2>
+          <h2 className="about__point-header about__point-header_active">Не&nbsp;затратно</h2>
           <p className="about__point-text">Мы дешевле главбуха!</p>
           <div className="about__horizontal-line_wide"></div>
         </div>

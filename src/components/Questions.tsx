@@ -10,37 +10,23 @@ type Data = {
   phone: string
 }
 
-function formatPhoneNumber(value: string) {
-  if (!value) return value;
-  const phoneNumber = value.replace(/[^\d]/g, '');
-  const phoneNumberLength = phoneNumber.length;
-  if (phoneNumberLength < 4) return phoneNumber;
-  if (phoneNumberLength < 7) {
-    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-  }
-  return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
-    3,
-    6
-  )}-${phoneNumber.slice(6, 9)}`;
-}
-
 export default function Questions() {
   const { register, formState: {errors}, reset, handleSubmit } = useForm<Data>()
   const [isPending, startTransition] = useTransition()
   
   const formSubmit = (formData: Data) => {
     formData.phone = formData.phone.replace(/(^8|7|\+7)/, '')
-    startTransition(() => sendConsultationResults({
+    startTransition(() => {sendConsultationResults({
       name: formData.name,
       phone: Number(formData.phone)
-    }))
+    })})
     reset()
   }
 
   const ref = useRef()
 
   return (
-    <section className="questions">
+    <section className="questions" id="questions">
       <form onSubmit={handleSubmit(formSubmit)} className="questions__form">
         <div className="questions__info">
           <h2 className="questions__title">Остались вопросы?</h2>

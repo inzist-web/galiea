@@ -7,7 +7,7 @@ import wideFolder from '@/images/wide-folder.png'
 
 export default function Plans() {
   return (
-    <section className="plans">
+    <section className="plans" id="plans">
       <h2 className="plans__heading">Тарифы:</h2>
       <div className="plans__wrapper-cards">
         <div className="plans__card">

@@ -4,7 +4,7 @@ import '@/blocks/footer.scss'
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer__wrapper">
         <div className="footer__info-paragraph">
           <Link href="/" className='footer__logo'>
