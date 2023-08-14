@@ -78,11 +78,11 @@
     width: 70%;
 
     @include laptop {
-      font-size: 16px;
+      font-size: 15.5px;
     }
 
     @media screen and (max-width: 1100px) {
-      font-size: 16px;
+      font-size: 15px;
       width: 67%;
     }
 
@@ -275,7 +275,7 @@
 
     @include mobile {
       top: 32px;
-      right: -54px;
+      right: -57px;
       width: 200px;
     }
   }
@@ -294,8 +294,8 @@
 
     @include tablet {
       width: 600px;
-      top: -32px;
-      right: 182px;
+      top: -7px;
+      right: 219px;
     }
 
     @include mobile {
