@@ -327,14 +327,14 @@
   &__background {
     position: absolute;
     overflow: visible;
-    top: -600px;
-    right: -530px;
+    top: -915px;
+    right: -779px;
     z-index: -1;
 
     @include wide-tablet {
       width: 1000px;
-      top: -386px;
-      right: -408px;
+      top: -648px;
+      right: -532px;
     }
 
     @include tablet {
