@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Проект приложения "Галиэя"
 
-## Getting Started
+Сайт разработан для Бухгалтерской Компании "Галиэя"
 
-First, run the development server:
+Дизайн и разработка Inzist
+
+## Установка зависимостей
+
+Находясь в корневой директории запустить:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Разработка
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Для запуска сервера разработки:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn dev
+```
 
-## Learn More
+## Cборка проекта
 
-To learn more about Next.js, take a look at the following resources:
+Для запуска сборки проекта нужно установить зависимости, после чего запустить сборку:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Запуск приложения
 
-## Deploy on Vercel
+Напрямую:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+yarn start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+С помощью pm2:
+
+```bash
+pm2 start npm --name galiea -- start
+```
+
+## Настройка переменных среды
+
+Для обозначния переменных среды использовать файл ```.env.local```. Файл должен располагаться в корневой папке проекта
+
+* Переменная ```TOKEN``` предназначена для токена от телеграм бота
+* Переменная ```USER_ID``` предназначена для ID пользователя, которому отправляется сообщение
+
+Пример:
+
+```bash
+TOKEN=6313026795:AAGnWswlDBA1NyJDYQsGbSKwaLx_dQidStA
+USER_ID=459521280
+```
