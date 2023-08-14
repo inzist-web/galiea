@@ -148,12 +148,14 @@
 
     @include tablet {
       padding: 40px 48px;
-      height: 225px;
+      min-height: 225px;
+      height: auto;
     }
 
     @include mobile {
+      min-height: 0;
       padding: 20px 26px;
-      height: 138px;
+      height: auto;
     }
 
     &_size_long {
@@ -170,13 +172,14 @@
       }
 
       @include tablet {
-        height: 224px;
+        min-height: 224px;
+        height: auto;
       }
 
       @include mobile {
-        height: 138px;
+        min-height: 0;
+        height: auto;
         padding: 20px 26px;
-
       }
     }
   }
@@ -231,13 +234,12 @@
 
     @include tablet {
       top: 34px;
-      right: -70px;
+      right: -82px;
       width: 250px;
     }
 
     @include mobile {
       top: 24px;
-      right: -67px;
       width: 150px;
     }
   }
