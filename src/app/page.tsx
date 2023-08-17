@@ -4,6 +4,7 @@ import About from '@/components/About'
 import Advantages from '@/components/Advantages'
 import Services from '@/components/Services'
 import Plans from '@/components/Plans'
+import Prefooter from '@/components/PreFooter'
 
 export const dynamic = 'error'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <Plans />
       <Questions />
+      <Prefooter />
     </>
   )
 }
