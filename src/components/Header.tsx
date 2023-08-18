@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="header">
       <Link href="/" className="header__logo">
-        <img src="/logo.svg" alt="логотип" className="header__icon" />
+        <img src="./logo.svg" alt="логотип" className="header__icon" />
         <h2 className="header__name">Галиэя</h2>
       </Link>
       <nav className="header__navbar">

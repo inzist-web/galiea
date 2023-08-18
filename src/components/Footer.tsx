@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer__wrapper">
         <div className="footer__info-paragraph">
           <Link href="/" className='footer__logo'>
-            <img src="/logo.svg" alt="логотип" className="footer__icon" />
+            <img src="./logo.svg" alt="логотип" className="footer__icon" />
             <h2 className="footer__name">Галиэя</h2>
           </Link>
           <p className="footer__text">ООО "Бухгалтерская компания "Галиэя"</p>
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       <a href="https://inzist.ru" target="_blank" className="footer__copyright">
         разработка и дизайн сайта
-        <img src="/inzist.svg" alt="Inzist - web разработка" className="footer__copyright-image" />
+        <img src="./inzist.svg" alt="Inzist - web разработка" className="footer__copyright-image" />
       </a>
     </footer>
   )
