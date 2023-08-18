@@ -31,7 +31,7 @@ export default function Questions() {
 
   return (
     <section className="questions" id="questions">
-      <form onSubmit={() => {setSuccess(success); setTimeout(() => {setSuccess(false)}, 2500)}} className="questions__form">
+      <form onSubmit={e => {e.preventDefault();setSuccess(success); setTimeout(() => {setSuccess(false)}, 2500)}} className="questions__form">
         <div className="questions__info">
           <h2 className="questions__title">Остались вопросы?</h2>
           <p className="questions__description">Оставьте заявку и&nbsp;мы с вами свяжемся</p>
