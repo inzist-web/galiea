@@ -14,25 +14,25 @@ export default function Advantages() {
       <div className="advantages__cards">
         <div className="advantages__card">
           <p className="advantages__text">Ответственность за начисленные налоги и правильность учета несет не главный бухгалтер, а юридическое лицо – бухгалтерская компания.</p>
-          <Image src={macbook} alt='' className='advantages__image-macbook'></Image>
+          <Image src={macbook} alt='' className='advantages__image-macbook' draggable="false"></Image>
         </div>
         <div className="advantages__card">
           <p className="advantages__text">Возможная налоговая проверка может происходить на нашей территории, что во многом исключает необоснованные претензии и не позволит парализовать деятельность предприятия.</p>
-          <Image src={safe} alt='' className='advantages__image-safe'></Image>
+          <Image src={safe} alt='' className='advantages__image-safe' draggable="false"></Image>
         </div>
         <div className="advantages__card">
           <p className="advantages__text">Затраты на бухгалтерское сопровождение ограничиваются стоимостью услуг нашей компании, которая значительно ниже расходов на содержание собственной бухгалтерии.</p>
-          <Image src={pointers} alt='' className='advantages__image-pointers'></Image>        
+          <Image src={pointers} alt='' className='advantages__image-pointers' draggable="false"></Image>        
         </div>
         <div className="advantages__card advantages__card_theme_blue">
           <p className="advantages__text">Высокая квалификация специалистов. Квалификация подтверждена аттестатами профессионального бухгалтера и регулярно повышается на конференциях, курсах и семинарах.</p>
-          <Image src={cirlceLeft} alt='' className='advantages__image-circle-left'></Image>
-          <Image src={circleRight} alt='' className='advantages__image-circle-right'></Image>
+          <Image src={cirlceLeft} alt='' className='advantages__image-circle-left' draggable="false"></Image>
+          <Image src={circleRight} alt='' className='advantages__image-circle-right' draggable="false"></Image>
         </div>
       </div>
       <div className="advantages__card advantages__card_size_long">
         <p className="advantages__text advantages__text_long">Вы не несете затрат на оборудование рабочих мест бухгалтеров, закупку правовых баз данных и бухгалтерских программ, а также экономите время и деньги на подборе и обучении кадров.</p>
-        <Image src={grath} alt='' className='advantages__image-grath'></Image>
+        <Image src={grath} alt='' className='advantages__image-grath' draggable="false"></Image>
       </div>
     </section>
   )

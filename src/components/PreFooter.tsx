@@ -7,7 +7,7 @@ export default function PreFooter() {
   return (
     <section className="prefooter">
       <a href="https://yandex.ru/maps/-/C-xuUvc" target="_blank" className="prefooter__map">
-        <Image src={map} alt="карта" className="prefooter__image" />
+        <Image src={map} alt="карта" className="prefooter__image" draggable="false" />
       </a>
       <div className="prefooter__content">
         <div className="prefooter__wrapper">
