@@ -1,6 +1,6 @@
 'use client';
 // import { sendConsultationResults } from "@/functions/sendConsultationRequest"
-import { useState, useTransition } from "react";
+import { FormEvent, useState, useTransition } from "react";
 import { useForm } from "react-hook-form"
 import '@/blocks/questions.scss'
 import Confirmation from "./Confirmation";
@@ -29,9 +29,15 @@ export default function Questions() {
   //   reset()
   // }
 
+  const submit = () => {
+    setSuccess(true); 
+    setTimeout(() => {setSuccess(false)}, 2500)
+    reset()
+  }
+
   return (
     <section className="questions" id="questions">
-      <form onSubmit={e => {e.preventDefault();setSuccess(success); setTimeout(() => {setSuccess(false)}, 2500)}} className="questions__form">
+      <form onSubmit={handleSubmit(submit)} className="questions__form">
         <div className="questions__info">
           <h2 className="questions__title">Остались вопросы?</h2>
           <p className="questions__description">Оставьте заявку и&nbsp;мы с вами свяжемся</p>
