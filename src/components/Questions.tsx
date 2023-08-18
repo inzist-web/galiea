@@ -1,5 +1,5 @@
 'use client';
-import { sendConsultationResults } from "@/functions/sendConsultationRequest"
+// import { sendConsultationResults } from "@/functions/sendConsultationRequest"
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form"
 import '@/blocks/questions.scss'
@@ -17,21 +17,21 @@ export default function Questions() {
 
   const [success, setSuccess] = useState(false)
   
-  const formSubmit = (formData: Data) => {
-    formData.phone = formData.phone.replace(/(^8|7|\+7)/, '')
-    startTransition(() => {sendConsultationResults({
-      name: formData.name,
-      phone: Number(formData.phone)
-    }).then(success => {
-      setSuccess(success);
-      setTimeout(() => {setSuccess(false)}, 2500)
-    })})
-    reset()
-  }
+  // const formSubmit = (formData: Data) => {
+  //   formData.phone = formData.phone.replace(/(^8|7|\+7)/, '')
+  //   startTransition(() => {sendConsultationResults({
+  //     name: formData.name,
+  //     phone: Number(formData.phone)
+  //   }).then(success => {
+  //     setSuccess(success);
+  //     setTimeout(() => {setSuccess(false)}, 2500)
+  //   })})
+  //   reset()
+  // }
 
   return (
     <section className="questions" id="questions">
-      <form onSubmit={handleSubmit(formSubmit)} className="questions__form">
+      <form onSubmit={() => {setSuccess(success); setTimeout(() => {setSuccess(false)}, 2500)}} className="questions__form">
         <div className="questions__info">
           <h2 className="questions__title">Остались вопросы?</h2>
           <p className="questions__description">Оставьте заявку и&nbsp;мы с вами свяжемся</p>
