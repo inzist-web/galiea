@@ -1,8 +1,9 @@
 'use client';
 import { sendConsultationResults } from "@/functions/sendConsultationRequest"
-import { useRef, useTransition } from "react";
-import { Controller, useForm } from "react-hook-form"
+import { useState, useTransition } from "react";
+import { useForm } from "react-hook-form"
 import '@/blocks/questions.scss'
+import Confirmation from "./Confirmation";
 export const dynamic = 'error'
 
 type Data = {
@@ -13,17 +14,20 @@ type Data = {
 export default function Questions() {
   const { register, formState: {errors}, reset, handleSubmit } = useForm<Data>()
   const [isPending, startTransition] = useTransition()
+
+  const [success, setSuccess] = useState(false)
   
   const formSubmit = (formData: Data) => {
     formData.phone = formData.phone.replace(/(^8|7|\+7)/, '')
     startTransition(() => {sendConsultationResults({
       name: formData.name,
       phone: Number(formData.phone)
+    }).then(success => {
+      setSuccess(success);
+      setTimeout(() => {setSuccess(false)}, 2500)
     })})
     reset()
   }
-
-  const ref = useRef()
 
   return (
     <section className="questions" id="questions">
@@ -47,6 +51,7 @@ export default function Questions() {
         </fieldset>
         <button className="questions__submit" type="submit">{isPending ? 'Отправка' : 'Отправить'}</button>
       </form>
+      <Confirmation isOpen={success} />
     </section>
   )
 }

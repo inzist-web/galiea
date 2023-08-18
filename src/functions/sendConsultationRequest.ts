@@ -16,9 +16,11 @@ const CustomerDataScheme: ZodSchema<CustomerData> = z.object({
 })
 
 export const sendConsultationResults = async (userData: CustomerData) => {
-  if (CustomerDataScheme.safeParse(userData).success)
-  bot.telegram.sendMessage(String(process.env.USER_ID!), `Заявка на сайте:
+  if (CustomerDataScheme.safeParse(userData).success){
+    bot.telegram.sendMessage(String(process.env.USER_ID!), `Заявка на сайте:
   Имя: ${userData.name}
   Телефон: +7${userData.phone}`).catch(err => console.log(err))
-  else return 'Ошибка, неверные данные'
+    return true
+}
+  else return false
 }
